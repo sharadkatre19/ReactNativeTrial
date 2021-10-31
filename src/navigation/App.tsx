@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
-import {Platform, StatusBar, Switch, Text, TouchableOpacity, View} from 'react-native';
-import {useData, ThemeProvider, useTheme} from '../hooks';
-import Home from '../screens/Home';
+import {Platform, StatusBar} from 'react-native';
+import {useData, ThemeProvider, AuthProvider} from '../hooks';
+import Root from './Roots';
 
 export default () => {
     const {isDark, theme, setTheme, handleIsDark} = useData();
@@ -17,7 +17,9 @@ export default () => {
 
   return (
     <ThemeProvider theme={theme} setTheme={setTheme}>
-      <Home/>
+      <AuthProvider>
+        <Root/>
+      </AuthProvider>
     </ThemeProvider>
   );
 };
