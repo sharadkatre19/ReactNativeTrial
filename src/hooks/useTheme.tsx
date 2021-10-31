@@ -1,5 +1,4 @@
 import React from 'react';
-import { Alert } from 'react-native';
 
 import {dark, light} from '../constants/';
 import {Theme, ThemeProviderType} from '../constants/types';
